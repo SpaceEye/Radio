@@ -1,0 +1,156 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome To Rraspberry Pi Music Station</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Audio List Player Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- main -->
+<div class="audio-main">
+	
+	<div align=center>
+		<img src="images/pi.png" height="120" alt="" class="txt-center"/>
+	</div>
+	
+	<h1>Rraspberry Pi Music Station</h1>
+	
+	
+    <div class="search bar3">
+        <div>
+            <input type="text" placeholder="请输入您要搜索的音乐...">
+			<button id='search' type="button" onclick = music_search()></button>
+			<button id='recognize' type="button" onclick = music_ctl()></button>
+		</div>
+    </div>
+	
+	<div class="audio-record-list">
+					<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+						<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+							<div class="jp-type-playlist">
+								<div class="jp-gui jp-interface">
+									<div class="jp-controls">	
+										<button class="jp-play" role="button" tabindex="0">play</button>
+									</div>
+									<div class="jp-progress">
+										<div class="jp-seek-bar">
+											<div class="jp-play-bar"></div>
+										</div>
+									</div>
+									<div class="jp-volume-controls">
+										<button class="jp-mute" role="button" tabindex="0">mute</button>
+										<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+										<div class="jp-volume-bar">
+											<div class="jp-volume-bar-value"></div>
+										</div>
+									</div>
+									<div class="jp-time-holder">
+										<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+										<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+									</div>
+									
+								</div>
+								<div class="jp-playlist">
+									<ul>
+										<li>&nbsp;</li>
+									</ul>
+								</div>
+								<div class="jp-no-solution">
+									<span>Update Required</span>
+									To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+								</div>
+							</div>
+						</div>
+	</div>
+	<div class="footer">
+
+  </div>
+</div>
+<!-- //main -->
+<!-- script for play-list -->
+<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="js/my_func.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		{
+			title:"白兰鸽巡游记",
+			wav:"../Musics/0.wav"
+		},
+		{
+			title:"秋城",
+			wav:"../Musics/1.wav"
+		},
+		{
+			title:"晚安",
+			wav:"../Musics/2.wav"
+		},
+		{
+			title:"春风十里",
+			wav:"../Musics/3.wav"
+		},
+		{
+			title:"青春没有终点",
+			wav:"../Musics/4.wav"
+		},
+		{
+			title:"阳光照进回忆",
+			wav:"../Musics/5.wav"
+		},
+		{
+			title:"一万次悲伤",
+			wav:"../Musics/6.wav"
+		},
+		{
+			title:"再见再见",
+			wav:"../Musics/7.wav"
+		}
+		
+	], {
+		swfPath: "../../dist/jplayer",
+		supplied: "oga, mp3, wav",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+
+	
+});
+	
+
+//]]>
+</script>
+<!-- //script for play-list -->
+
+</body>
+</html>
